@@ -46,6 +46,7 @@ void PrintNumber(char *number)
 		cout << number[i++];
 }
 
+<<<<<<< HEAD
 void Print1ToMaxOfNDigitals(int n)
 {
 	if (n <= 0)
@@ -67,6 +68,8 @@ void Print1ToMaxOfNDigitals(int n)
 /*
 递归方法
  */
+=======
+>>>>>>> f99cbf0109806e202ea6e361cfaac11dd4aaef61
 void Print1ToMaxOfNDigitalsRecursively(char *number, int len, int index)
 {
 	if (index == len - 1)
@@ -75,7 +78,10 @@ void Print1ToMaxOfNDigitalsRecursively(char *number, int len, int index)
 		return ;
 	}
 
+<<<<<<< HEAD
 	// 打印次高位的0~9
+=======
+>>>>>>> f99cbf0109806e202ea6e361cfaac11dd4aaef61
 	for (int i = 0; i < 10; i++)
 	{
 		number[index + 1] = i + '0';
@@ -91,7 +97,10 @@ void Print1ToMaxOfNDigitals2(int n)
 	char *number = new char[n + 1];
 	number[n] = '\0';
 
+<<<<<<< HEAD
 	// 打印最高位的0~9
+=======
+>>>>>>> f99cbf0109806e202ea6e361cfaac11dd4aaef61
 	for (int i = 0; i < 10; i++)
 	{
 		number[i] = i + '0';
@@ -99,4 +108,24 @@ void Print1ToMaxOfNDigitals2(int n)
 	}
 
 	delete number;
+<<<<<<< HEAD
+=======
+}
+
+void Print1ToMaxOfNDigitals(int n)
+{
+	if (n <= 0)
+		return ;
+
+	char *number = new char[n + 1];
+	memset(number, '0', n);
+	number[n] = '\0';
+
+	while (!Increment(number))
+	{
+		PrintNumber(number);
+	}
+
+	delete number;
+>>>>>>> f99cbf0109806e202ea6e361cfaac11dd4aaef61
 }
